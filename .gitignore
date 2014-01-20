@@ -1,0 +1,4 @@
+*.userprefs
+*.mdb
+bin/DEBUG/*
+bin/Run/*
