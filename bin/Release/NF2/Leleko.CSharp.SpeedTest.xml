@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Leleko.CSharp.SpeedTest</name>
+    </assembly>
+    <members>
+        <member name="T:Leleko.CSharp.SpeedTest">
+            <summary>
+            Тесты скорости выполнения методов
+            </summary>
+            <summary>
+            Тесты скорости выполнения методов
+            </summary>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Compare(Leleko.CSharp.SpeedTest[])">
+            <summary>
+            Сравнить результаты тестов скорости
+            </summary>
+            <param name="speedTests">Speed tests.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Compare(System.Collections.Generic.IEnumerable{Leleko.CSharp.SpeedTest})">
+            <summary>
+            Сравнить результаты тестов скорости
+            </summary>
+            <param name="speedTests">Speed tests.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Compare">
+            <summary>
+            Сравнить результаты тестов скорости
+            </summary>
+        </member>
+        <member name="T:Leleko.CSharp.SpeedTest.Comparison">
+            <summary>
+            Сравнение результатов по пулу тестов
+            </summary>
+        </member>
+        <member name="F:Leleko.CSharp.SpeedTest.Comparison.speedTests">
+            <summary>
+            The speed tests dictionary {Name,SpeedTest}
+            </summary>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.#ctor(System.Collections.Generic.IEnumerable{Leleko.CSharp.SpeedTest})">
+            <summary>
+            Initializes a new instance of the <see cref="!:Leleko.CSharp.SpeedTest+Comparison" /> class.
+            </summary>
+            <param name="speedTests">Speed tests.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:Leleko.CSharp.SpeedTest+Comparison" /> class.
+            </summary>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.NeedRecalc">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="!:Leleko.CSharp.SpeedTest+Comparison" /> need recalc.
+            </summary>
+            <value>
+                <c>true</c> if need recalc; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="F:Leleko.CSharp.SpeedTest.Comparison.comparsionResult">
+            <summary>
+            The comparsion result (cache)
+            </summary>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.Result">
+            <summary>
+            Gets the result.
+            </summary>
+            <value>The result.</value>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.RecalcResult">
+            <summary>
+            Пересчитываем результаты
+            </summary>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="!:Leleko.CSharp.SpeedTest+Comparison" />.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents the current <see cref="!:Leleko.CSharp.SpeedTest+Comparison" />.</returns>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.Add(Leleko.CSharp.SpeedTest)">
+            <summary>
+            Add the specified value.
+            </summary>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.Remove(Leleko.CSharp.SpeedTest)">
+            <summary>
+            Remove the specified speedTest.
+            </summary>
+            <param name="speedTest">Speed test.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.Remove(System.String)">
+            <summary>
+            Remove the specified key.
+            </summary>
+            <param name="key">Key.</param>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.ContainsKey(System.String)">
+            <summary>
+            Containses the key.
+            </summary>
+            <returns>
+                <c>true</c>, if key was containsed, <c>false</c> otherwise.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.Item(System.String)">
+            <summary>
+            Gets or sets the <see cref="!:Leleko.CSharp.SpeedTest+Comparison" /> with the specified key.
+            </summary>
+            <param name="key">Key.</param>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.Keys">
+            <summary>
+            Gets the keys.
+            </summary>
+            <value>The keys.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Comparison.Values">
+            <summary>
+            Gets the values.
+            </summary>
+            <value>The values.</value>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.Clear">
+            <summary>
+            Clear this instance.
+            </summary>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Comparison.Contains(System.Collections.Generic.KeyValuePair{System.String,Leleko.CSharp.SpeedTest})">
+            <summary>
+            Contains the specified item.
+            </summary>
+            <param name="item">Item.</param>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Name">
+            <summary>
+            get имя теста
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Function">
+            <summary>
+            Выполняемое действие result:{true:продолжить,false:прервать}
+            </summary>
+            <value>The func.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Repeats">
+            <summary>
+            get кол-во выполненных итераций
+            </summary>
+            <value>The repeats.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Perfomance">
+            <summary>
+            get производительность: кол-во итераций в секунду
+            </summary>
+            <value>The repeats per second.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Ticks">
+            <summary>
+            get кол-во прошедших тиков
+            </summary>
+            <value>The ticks.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Seconds">
+            <summary>
+            get кол-во прошедших секунд
+            </summary>
+            <value>The seconds.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.Time">
+            <summary>
+            get прошедшее время
+            </summary>
+            <value>The time.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.MaxRepeats">
+            <summary>
+            get лимит на кол-во итераций
+            </summary>
+            <value>The max repeats.</value>
+        </member>
+        <member name="P:Leleko.CSharp.SpeedTest.MaxTicks">
+            <summary>
+            get лими на кол-во тиков
+            </summary>
+            <value>The max ticks.</value>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.MakeOnlyFunc(Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Тест ограниченный только функцией {do while(func())}
+            </summary>
+            <returns>The only func.</returns>
+            <param name="func">Func.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.MakeRepeatsLimit(System.Int64,Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Тест ограниченный функцией и лимитом итераций
+            </summary>
+            <returns>The repeats limit.</returns>
+            <param name="maxRepeats">Max repeats.</param>
+            <param name="func">Func.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.MakeTicksLimit(System.Int64,Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Тест ограниченный функцией и лимитом времени
+            </summary>
+            <returns>The ticks limit.</returns>
+            <param name="maxTicks">Max ticks.</param>
+            <param name="func">Func.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.MakeAll(System.Int64,System.Int64,Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Тест ограниченный функцией, лимитами времени и итераций
+            </summary>
+            <returns>The all.</returns>
+            <param name="maxRepeats">Max repeats.</param>
+            <param name="maxTicks">Max ticks.</param>
+            <param name="func">Func.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Make(System.String,System.Nullable{System.Int64},System.Nullable{System.TimeSpan},Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Выполнить тест
+            </summary>
+            <param name="name">имя теста</param>
+            <param name="maxRepeats">максимальное число итераций</param>
+            <param name="maxTicks">максимальное число тиков</param>
+            <param name="func">выполняемое действие result:{true:продолжить,false:прервать}</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Make(System.String,System.Nullable{System.Int64},System.Int32,Leleko.CSharp.SpeedTest.Func{System.Boolean})">
+            <summary>
+            Выполнить тест
+            </summary>
+            <param name="name">имя теста</param>
+            <param name="maxRepeats">максимальное число итераций</param>
+            <param name="maxSeconds">максимальное число секунд</param>
+            <param name="func">выполняемое действие result:{true:продолжить,false:прервать}</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Make(System.Nullable{System.Int64},System.Nullable{System.TimeSpan},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Leleko.CSharp.SpeedTest.Func{System.Boolean}}})">
+            <summary>
+            Выполнить группу тестов
+            </summary>
+            <param name="name">имя теста</param>
+            <param name="maxRepeats">максимальное число итераций</param>
+            <param name="maxTicks">максимальное число тиков</param>
+            <param name="funcs">выполняемые действия result:{true:продолжить,false:прервать}</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.Make(System.Nullable{System.Int64},System.Int32,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,Leleko.CSharp.SpeedTest.Func{System.Boolean}}})">
+            <summary>
+            Выполнить группу тестов
+            </summary>
+            <param name="name">имя теста</param>
+            <param name="maxRepeats">максимальное число итераций</param>
+            <param name="maxSeconds">максимальное число тиков</param>
+            <param name="funcs">выполняемые действия result:{true:продолжить,false:прервать}</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.CompareTo(Leleko.CSharp.SpeedTest)">
+            <Docs>To be added.</Docs>
+            <para>Returns the sort order of the current instance compared to the specified object.</para>
+            <summary>
+            Compares to.
+            </summary>
+            <returns>The to.</returns>
+            <param name="other">Other.</param>
+        </member>
+        <member name="M:Leleko.CSharp.SpeedTest.ToString">
+            <summary>
+            Строковое представление
+            </summary>
+            <returns>строковое представление</returns>
+        </member>
+    </members>
+</doc>

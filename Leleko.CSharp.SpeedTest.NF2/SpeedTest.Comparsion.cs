@@ -29,6 +29,14 @@ namespace Leleko.CSharp
 		}
 
 		/// <summary>
+		/// Сравнить результаты тестов скорости
+		/// </summary>
+		public static Comparison Compare()
+		{
+			return new Comparison();
+		}
+
+		/// <summary>
 		/// Сравнение результатов по пулу тестов
 		/// </summary>
 		public sealed class Comparison: IDictionary<string, SpeedTest>
@@ -47,7 +55,7 @@ namespace Leleko.CSharp
 				if (speedTests == null)
 					throw new ArgumentNullException("speedTests");
 				
-				this.speedTests = new Dictionary<string, SpeedTest>();
+				this.speedTests = new Dictionary<string, SpeedTest>((speedTests is ICollection) ? (speedTests as ICollection).Count : 8);
 				try
 				{
 					foreach (var e in speedTests)
@@ -57,6 +65,15 @@ namespace Leleko.CSharp
 				{
 					throw new ArgumentException("Name of test not unique in dictionary", "speedTests", ex);
 				}
+				this.NeedRecalc = true;
+			}
+
+			/// <summary>
+			/// Initializes a new instance of the <see cref="Leleko.CSharp.SpeedTest+Comparison"/> class.
+			/// </summary>
+			internal Comparison()
+			{
+				this.speedTests = new Dictionary<string, SpeedTest>();
 				this.NeedRecalc = true;
 			}
 

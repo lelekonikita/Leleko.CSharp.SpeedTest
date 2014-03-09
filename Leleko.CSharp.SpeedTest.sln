@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRun", "ConsoleRun\ConsoleRun.csproj", "{20D0CEE6-3EC5-4D10-A78B-5AB5878E281C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "ConsoleRun\Example.csproj", "{20D0CEE6-3EC5-4D10-A78B-5AB5878E281C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leleko.CSharp.SpeedTest.NF2", "Leleko.CSharp.SpeedTest.NF2\Leleko.CSharp.SpeedTest.NF2.csproj", "{BB2F09DC-A355-4898-BAD9-F94BA280F70A}"
 EndProject
@@ -27,6 +27,6 @@ Global
 		{BB2F09DC-A355-4898-BAD9-F94BA280F70A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ConsoleRun\ConsoleRun.csproj
+		StartupItem = ConsoleRun\Example.csproj
 	EndGlobalSection
 EndGlobal
