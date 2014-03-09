@@ -4,7 +4,7 @@ namespace Leleko.CSharp
 {
 	public partial class SpeedTest
 	{
-		public delegate T Func<T>();  
+		public delegate T Func<out T>();  
 	}
 }
 

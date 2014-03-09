@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Collections;
+using System.Text;
 
 namespace Leleko.CSharp
 {
@@ -35,7 +37,7 @@ namespace Leleko.CSharp
 		/// get производительность: кол-во итераций в секунду
 		/// </summary>
 		/// <value>The repeats per second.</value>
-		public double Perfomance { get { return this.Repeats/this.Seconds; } }
+		public double Perfomance { get { return (this.Repeats/this.Ticks)*TimeSpan.TicksPerSecond; } }
 
 		/// <summary>
 		/// get кол-во прошедших тиков
@@ -183,7 +185,9 @@ namespace Leleko.CSharp
 			result.Name = name;
 			result.Function = func;
 			result.MaxRepeats = maxRepeats;
-			result.MaxTicks = maxTime.Value.Ticks;
+
+			if (maxTime != null)
+				result.MaxTicks = maxTime.Value.Ticks;
 
 			return result;
 		}
@@ -253,7 +257,7 @@ namespace Leleko.CSharp
 		{
 			return 
 				string.Format(
-					"SpeedTest:{{ Name:{0}, Time:{1}, Repeats:{2}, Perfomance:{3}, Limits:{{ Ticks:{4}, Repeats:{5} }} }}", 
+					"SpeedTest:{{ Name:{0}, Time:{1}, Repeats:{2}, Perfomance:{3:E3}, Limits:{{ Ticks:{4}, Repeats:{5} }} }}", 
 					this.Name ?? this.Function.Method.Name, 
 					this.Time,
 					this.Repeats,
@@ -263,5 +267,7 @@ namespace Leleko.CSharp
 				);
 		}
 	}
+
+
 }
 
